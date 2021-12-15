@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_enable_bluetooth">
+
+    <fragment
+        android:id="@+id/navigation_enable_bluetooth"
+        android:name="de.georgrichter.vibrationdemoapp.ui.enablebluetooth.EnableBluetoothFragment"
+        android:label="@string/title_enable_bluetooth_long"
+        tools:layout="@layout/fragment_scan_qr" />
+
+    <fragment
+        android:id="@+id/navigation_scan_qr"
+        android:name="de.georgrichter.vibrationdemoapp.ui.scanqr.ScanQRFragment"
+        android:label="@string/title_scan_qr_long"
+        tools:layout="@layout/fragment_enable_bluetooth" />
+
+    <fragment
+        android:id="@+id/navigation_connect"
+        android:name="de.georgrichter.vibrationdemoapp.ui.connect.ConnectFragment"
+        android:label="@string/title_connect_long"
+        tools:layout="@layout/fragment_connect" />
+</navigation>

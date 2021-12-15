@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Tour2Activity"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp">
+
+    <ImageButton
+        android:id="@+id/settings_button"
+        android:onClick="onSettingsClick"
+        app:layout_constraintTop_toBottomOf="@id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="Settings"
+        android:background="@android:drawable/ic_menu_preferences" />
+
+
+    <Spinner
+        android:id="@+id/spinner_art_piece"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/settings_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fake Screen"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/button_enter_section"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onEnterSectionClick"
+        android:text="Abschnitt betreten"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_art_piece"/>
+
+    <Button
+        android:id="@+id/button_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCancelClick"
+        android:text="X Abbrechen"
+        android:backgroundTint="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+    <LinearLayout
+        android:id="@+id/tut_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/button_enter_section"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tutorial_text"
+            android:text="Tutorial: aktuelle datei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:onClick="onPlayerStopClick"
+                android:text="\u25a0"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:onClick="onPlayerBackClick"
+                android:layout_marginStart="10dp"
+                android:text="\u23ee"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:onClick="onPlayerPlayPauseClick"
+                android:layout_marginStart="10dp"
+                android:text="\u23ef"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:onClick="onPlayerForwardClick"
+                android:layout_marginStart="10dp"
+                android:text="\u23ed"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onPauseArtPieceSound"
+        android:text="Kunstwerk Muten"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tut_player"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/button_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="360dp"
+                android:layout_height="700dp"
+                android:layout_marginStart="-320dp"
+                android:orientation="vertical">
+
+                <SeekBar
+                    android:id="@+id/inner_seekbar"
+                    android:layout_width="700dp"
+                    android:layout_height="match_parent"
+                    android:rotation="90" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="360dp"
+                android:layout_height="700dp"
+                android:layout_marginStart="-360dp"
+                android:orientation="vertical">
+
+                <SeekBar
+                    android:id="@+id/outer_seekbar"
+                    android:layout_width="700dp"
+                    android:layout_height="match_parent"
+                    android:rotation="90" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="360dp"
+                android:layout_height="700dp"
+                android:layout_marginStart="-320dp"
+                android:orientation="vertical">
+
+                <SeekBar
+                    android:id="@+id/distance_seekbar"
+                    android:layout_width="700dp"
+                    android:layout_height="match_parent"
+                    android:rotation="90" />
+            </FrameLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

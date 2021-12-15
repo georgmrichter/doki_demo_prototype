@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.TourActivity"
+    android:layout_margin="5dp">
+
+    <ImageButton
+        android:onClick="onSettingsClick"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="Settings"
+        android:background="@android:drawable/ic_menu_preferences" />
+
+    <TextView
+        android:text="Fake Screen"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Spinner
+            android:id="@+id/spinner_art_piece"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/button_enter_outer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onEnterOuterZoneClick"
+            android:text="Äußere Zone betreten"/>
+
+        <Button
+            android:id="@+id/button_enter_inner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onEnterInnerZoneClick"
+            android:text="Innere Zone betreten"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/button_leave_inner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onLeaveInnerZoneClick"
+            android:text="Innere Zone verlassen"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/button_leave_outer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onLeaveOuterZoneClick"
+            android:text="Äußere Zone verlassen"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/button_enter_section2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onEnterSectionClick"
+            android:text="Abschnitt betreten"
+            android:layout_marginTop="30dp"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCancelClick"
+        android:text="X Abbrechen"
+        android:backgroundTint="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

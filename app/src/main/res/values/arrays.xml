@@ -1,0 +1,6 @@
+<resources>
+    <string-array name="distance_steps">
+        <item>Äußere Zone</item>
+        <item>Innere Zone</item>
+    </string-array>
+</resources>

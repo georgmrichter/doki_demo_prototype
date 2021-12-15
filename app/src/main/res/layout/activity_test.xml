@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.TestActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/connectButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onConnectClick"
+            android:text="Connect" />
+
+        <Button
+            android:id="@+id/scanButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onScanClick"
+            android:text="Scan" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+            <EditText
+                android:id="@+id/effectNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:text="119" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:onClick="onMinusClick"
+                android:text="-"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:onClick="onPlusClick"
+                android:text="+"/>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/vibrateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onVibrateClicked"
+            android:text="Vibrate" />
+
+    <Button
+        android:id="@+id/enterOuterButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onEnterOuterClick"
+        android:text="Enter Outer"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onEnterInnerClick"
+        android:text="Enter Inner" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onLeaveInnerClick"
+        android:text="Leave Inner" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onLeaveOuterClick"
+        android:text="Leave Outer" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Outer" />
+
+        <Spinner
+            android:id="@+id/outerSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/outerVibSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Audio Vibration"
+            android:checked="false"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inner"/>
+
+        <Spinner
+            android:id="@+id/innerSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/innerVibSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Audio Vibration"
+            android:checked="false"/>
+
+        <TextView
+            android:id="@+id/fadeDurationText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fade duration"/>
+
+        <SeekBar
+            android:id="@+id/fadeDurationSeekBar"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="9"
+            android:progress="4" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/bluetoothVibSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bluetooth Vibration"
+            android:checked="true"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/bluetoothAudioVibSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Audio Vibration" />
+
+    </LinearLayout>
+</ScrollView>
